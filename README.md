@@ -14,3 +14,9 @@
 ###
 
 
+
+
+## References 
+
+1. http://cloudurable.com/ppt/kafka-tutorial-cloudruable-v2.pdf
+2. http://cloudurable.com/blog/what-is-kafka/index.html

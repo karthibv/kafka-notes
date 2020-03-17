@@ -16,8 +16,8 @@
 3. Start confluent  
         confluent-5.3.0/bin  
             ... start by using below command  
-                ..1. confluent local start
-            ... check status by using below command  
+                ..1. confluent local start  
+            ... check status by using below command    
                 ..2. confluent local status  
 
 
