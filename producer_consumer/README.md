@@ -1,19 +1,36 @@
-# Basic commands
+# Kafka Producer and consumer
 
-### 1. Console producer   
+## Kafka Producer
+1. Kafka Sample Java Producer      
+    [ProducerDemo.java](kafkacourse/kafka-basics/src/main/java/kafka.tutorial1/ProducerDemo.java)   
+    1. Producer Properties  - setup bootstrap servers, key and serializer configuration
+    2. Create Kafka Producer instance with Producer properties  
+    3. Create Kafka producer record with topic name and records (only value in kafka record)
+    4. Send records with kafka producer  
+    5. Flush and Close the producer   
 
-./kafka-console-producer --broker-list localhost:9092 --topic testing
-
-### 2. Console consumer
-
-./kafka-console-consumer --bootstrap-server localhost:9092 --from-beginning --topic testing
-
-
-### 3. Console producer with key seperator
-
-./kafka-console-producer --broker-list localhost:9092 --topic testing --property parse.key=true --property key.separator=,
+2. Kafka Sample Java Producer - Message Key and Sync call     
+    [ProducerDemo.java](kafkacourse/kafka-basics/src/main/java/kafka.tutorial1/ProducerDemoKeys.java)   
+    1. Producer Properties  - setup bootstrap servers, key and serializer configuration
+    2. Create Kafka Producer instance with Producer properties  
+    3. Create Kafka producer record with topic name and records (key and value)  
+    4. Send records (key and value ) synchronously with Kafka Producer
+    5. Flush and Close the producer   
 
 
-### 4. Console consumer with key seperator
+3. Kafka Sample Java Producer with aync callback    
+    [ProducerDemoWithCallback.java](kafkacourse/kafka-basics/src/main/java/kafka.tutorial1/ProducerDemoWithCallback.java)     
+    1. Producer Properties  - setup bootstrap servers, key and serializer configuration    
+    2. Create Kafka Producer instance with Producer properties     
+    3. Create Kafka producer record with topic name and records (only value in kafka record)   
+    4. Send records asynchronously with Kafka Producer    
+    5. Flush and Close the producer    
+    
 
-/kafka-console-consumer --bootstrap-server localhost:9092 --from-beginning --topic testing --property print.key=true
+## Kafka consumer    
+1. Kafka Sample Java Consumer        
+    [ProducerDemo.java](kafkacourse/kafka-basics/src/main/java/kafka.tutorial1/ConsumerDemo.java)     
+    1. Consumer Properties  - setup bootstrap servers,  key and serializer configuration,group id, auto offset reset      
+    2. Create Kafka consumer instance with Producer properties     
+    3. Subscribe Kafka Consumer to the topics    
+    4. Pool for new messages with Kafka Consumer    
