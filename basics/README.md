@@ -1,5 +1,6 @@
 # Kafaka Basics
 
+## Zookeeper   
 1. Role of Zookeeper      
     zookeeper maintains the list of brokers, brokers info is stored in zookeeper under /brokers/ids    
 2. Ensemble   
@@ -26,6 +27,7 @@ the following parameters:
     hostname    The hostname or IP address of the server.     
     peerPort    The TCP port over which servers in the ensemble communicate with each other. (default port: 2888)     
     leaderPort  The TCP port over which leader election is performed. (default port: 3888)      
+
 
 
 
