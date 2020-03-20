@@ -1,7 +1,8 @@
 # Sample Kafka Stream    
 
 
-### 1. Simple streaming app with input and output topic           
+### 1. Streaming app with input and output topic     
+Anatomy of kafka stream apps          
 
 1. Create an input Topic called lines-topic        
 2. Create an input Topic called lines-lower-topic        
@@ -9,13 +10,18 @@
         [streams.MapSample.java](src/main/java/streams/MapSample.java)        
 4. Publish messsage to the Topic       
 ./kafka-console-producer --broker-list localhost:9092 --property "parse.key=true" --property "key.seperator=:" --topic lines-topic      
+    1:"Kafka powers the Confluent Streaming Platform"
+    2:"Events are stored in Kafka"
+    3:"Confluent contributes to Kafka"
+
 5. consume message from the output topic    
 /kafka-console-consumer --bootstrap-server localhost:9092 --from-beginning --topic lines-lower-topic    
 
 
 
 
-### 1. Simple streaming app with JSON messages and Kafka Stream DSL       
+### 2. Streaming app with JSON messages and Kafka Stream DSL    
+Kafka Streams application that uses custom serializer and deserializer to work with data that is JSON formatted.       
 
 1. Create an input Topic called temperatures-topic        
 2. Create an input Topic called high-temperatures-topic        
